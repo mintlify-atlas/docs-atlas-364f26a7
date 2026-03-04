@@ -1,0 +1,125 @@
+{
+  "projectType": "saas",
+  "projectName": "CURaise",
+  "projectDescription": "A full-stack fundraising platform connecting organizations with buyers through customizable fundraising campaigns.",
+  "theme": "palm",
+  "primaryColor": "#10b981",
+  "lightColor": "#34d399",
+  "darkColor": "#059669",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "platform-overview"
+            ]
+          },
+          {
+            "group": "For Buyers",
+            "pages": [
+              "buyers/browsing-fundraisers",
+              "buyers/placing-orders",
+              "buyers/managing-account",
+              "buyers/referral-program"
+            ]
+          },
+          {
+            "group": "For Sellers",
+            "pages": [
+              "sellers/getting-started",
+              "sellers/creating-fundraisers",
+              "sellers/managing-items",
+              "sellers/managing-orders",
+              "sellers/pickup-events",
+              "sellers/announcements",
+              "sellers/organization-settings"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Developer Guide",
+        "groups": [
+          {
+            "group": "Architecture",
+            "pages": [
+              "dev/architecture-overview",
+              "dev/monorepo-structure",
+              "dev/tech-stack",
+              "dev/authentication"
+            ]
+          },
+          {
+            "group": "Backend",
+            "pages": [
+              "dev/backend/setup",
+              "dev/backend/database-schema",
+              "dev/backend/api-patterns",
+              "dev/backend/middleware"
+            ]
+          },
+          {
+            "group": "Frontend",
+            "pages": [
+              "dev/frontend/setup",
+              "dev/frontend/routing",
+              "dev/frontend/state-management",
+              "dev/frontend/components"
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "api/fundraiser",
+              "api/order",
+              "api/organization",
+              "api/user",
+              "api/email"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "dev/deployment/environment-setup",
+              "dev/deployment/frontend",
+              "dev/deployment/backend",
+              "dev/deployment/database-migrations"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-organization fundraising campaigns",
+    "Real-time order management and tracking",
+    "Flexible payment verification (Venmo, other methods)",
+    "Pickup event scheduling and QR code generation",
+    "Referral program for tracking campaign ambassadors",
+    "Role-based access control (buyers and sellers)",
+    "Image upload and management for fundraisers and items",
+    "Email notifications via Mailgun",
+    "Type-safe API contracts with shared Zod schemas"
+  ],
+  "publicApiSurface": [
+    "GET /api/fundraiser - List all fundraisers",
+    "GET /api/fundraiser/:id - Get fundraiser details",
+    "POST /api/fundraiser - Create fundraiser (authenticated)",
+    "PUT /api/fundraiser/:id - Update fundraiser (authenticated)",
+    "DELETE /api/fundraiser/:id - Delete fundraiser (authenticated)",
+    "POST /api/order - Create order (authenticated)",
+    "GET /api/order - Get user orders (authenticated)",
+    "GET /api/order/:id - Get order details (authenticated)",
+    "PUT /api/order/:id - Update order status (authenticated)",
+    "GET /api/organization - List organizations",
+    "POST /api/organization - Create organization (authenticated)",
+    "PUT /api/organization/:id - Update organization (authenticated)",
+    "GET /api/user/me - Get current user (authenticated)",
+    "POST /api/email/invite - Send invitation email (authenticated)"
+  ]
+}
